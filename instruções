@@ -1,0 +1,33 @@
+Docker Hub -> é um github com as imagens de docker
+
+#Comandos#
+- docker run -it 'nome da imagem' (Rodar a imagem no terminal)
+
+- docker ps (Lista todos os conteiners ativos no pc)
+
+- docker ps -a (Lista todos os conteiners que rodaram no pc)
+
+- docker run -d 'nome da imagem' (roda a imagem e nao ocupa o terminal(esta em background))
+
+- docker stop 'id ou nome do conteiner que aparece no ps'(para a imagem (usado muito para imagens em background))
+
+- docker start 'id ou nome do conteiner que aparece no ps'(para voltar a imagem ja criada)
+
+- docker run -d -p "porta do seu pc ex: localhost:123 vc coloca 123":"porta do docker definido no expose" --name 'nome para o conteiner' 'nome da imagem'(cria um conteiner com um nome que voce escolher)
+
+- docker logs 'id ou nome do conteiner que aparece no ps' (para ver os logs)
+
+- docker rm 'id ou nome do conteiner que aparece no ps' (remover conteiners)
+
+- docker image ls (Lista todas as imagens no pc)
+
+-docker imagem system prune (remove tudo que nao esta sendo utilizado)
+--------------------------------------------------
+#Criação de imagem#
+- docker build . (fala que no diretorio atual tem um arquivo Dockerfile e esta buildando)
+
+- docker build -t "nome que voce quer dar para imagem" . 
+
+- docker rmi "nome da imagem" (para remover uma imagem (se tiver sendo usado em um conteiner tem que apagar o conteiner tambem))
+
+
